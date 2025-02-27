@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidden message</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="heartInput">
+    <label for="heartInput" class="hearts" id="heartholder"></label>
+    <span class="hearts" id="heart"></span>
+    <span class="circle"></span>
+
+    <input type="radio" checked="checked" id="checkENG" name="language">
+
+    <div class="message eng">
+        <p>you will always be my favorite person forever</p>
+        <p class="love">I love you ❤ ippi</p>
+    </div>
+
+    <audio id="backsound" autoplay loop>
+        <source src="https://files.catbox.moe/ji8j73.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const audio = document.getElementById("backsound");
+            audio.volume = 0.5;
+            audio.play().catch(error => {
+                console.log("Autoplay dicegah oleh browser:", error);
+            });
+        });
+    </script>
+</body>
+</html>
